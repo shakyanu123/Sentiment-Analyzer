@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Sentiment Analysis</h1>
+        <p class="subtitle">Analyze the emotional tone of text or social media posts</p>
+
+        <div class="error" id="error"></div>
+        
+        <div class="input-section">
+            <label for="textInput">Enter Text:</label>
+            <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
+        </div>
+
+        <div class="input-section">
+            <label for="urlInput">Or Enter URL:</label>
+            <input type="text" id="urlInput" placeholder="https://example.com/post">
+            <small style="color: #888; display: block; margin-top: 5px;">Enter URL to fetch and analyze content</small>
+        </div>
+
+        <div class="button-group">
+            <button class="analyze-btn" onclick="analyzeSentiment()">Analyze Sentiment</button>
+            <button class="clear-btn" onclick="clearAll()">Clear</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 10px; color: #666;">Analyzing...</p>
+        </div>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
